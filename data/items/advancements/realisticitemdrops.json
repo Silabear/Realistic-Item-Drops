@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Realistic Item Drops",
+        "description": "Makes item drops display realistically",
+        "icon": {
+            "item": "minecraft:spyglass"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:silabear",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
