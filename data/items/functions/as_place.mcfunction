@@ -8,10 +8,10 @@ scoreboard players add #as_count sb_items.data 1
 scoreboard players set #success sb_items.data 0
 execute store success score #success sb_items.data if entity @p[distance=..2,predicate=items:sprinting]
 
-#Store in a storage item nbt to avoid selector usage.
+#Store in a storage item nbt to avoid selector usage (@e).
 data modify storage items:main temp set from entity @s
 
-#Run the function on the new armor_stand to avoid multiple selectors.
+#Run the function on the new armor_stand to avoid multiple @e selectors.
 execute as @e[type=armor_stand,tag=sb.item_drop,distance=..1,limit=1,sort=nearest,tag=!sb.completed] run function items:as_place_2
 
 #Delete item
