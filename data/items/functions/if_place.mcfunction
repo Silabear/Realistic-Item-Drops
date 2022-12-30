@@ -2,6 +2,7 @@
 ## Turn the item into an item frame
 #Summon item_frame
 summon item_frame ~ ~ ~ {Facing:1b,Invisible:1b,Tags:["sb.item_flat","sb.temp"],Fixed:1b,Invulnerable:1b}
+scoreboard players add #if_count sb_items.data 1
 
 #Store in a storage item nbt to avoid selector usage (@e).
 data modify storage items:main temp set from entity @s Item
