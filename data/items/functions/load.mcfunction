@@ -1,4 +1,5 @@
 # Scoreboards
+scoreboard objectives add sb_items.data dummy
 scoreboard objectives add ridsb.initcheck dummy
 
 execute store success score .uninstall ridsb.initcheck run scoreboard objectives add ridsb.uninstalled dummy
@@ -8,6 +9,7 @@ execute store success score .settings ridsb.initcheck run scoreboard objectives 
 execute unless score .settings ridsb.initcheck matches 0 run scoreboard players set .display ridsb.settings 0
  
 scoreboard objectives add sb.lifetime dummy
+schedule function items:schedules/loop_5s 5s replace
 
 #define storage items:main
 
