@@ -8,3 +8,6 @@ execute store success score .settings ridsb.initcheck run scoreboard objectives 
 execute unless score .settings ridsb.initcheck matches 0 run scoreboard players set .display ridsb.settings 0
  
 scoreboard objectives add sb.lifetime dummy
+
+#define storage items:main
+
