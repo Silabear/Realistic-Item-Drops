@@ -1,18 +1,19 @@
-summon armor_stand ~ ~ ~ {ShowArms:1b,Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Invisible:1b,Tags:["sb.item_drop","global.ignore.kill","global.ignore.pos","global.ignore"],Silent:1b,Invulnerable:1b}
 
-execute unless entity @p[distance=..2,predicate=items:sprinting] run data modify entity @e[tag=sb.item_drop,limit=1,sort=nearest,tag=!sb.completed] Motion set from entity @s Motion
+#Summon visual
+summon armor_stand ~ ~ ~ {ShowArms:1b,Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Invisible:1b,Tags:["sb.item_drop","sb.check_ground","global.ignore.kill","global.ignore.pos","global.ignore"],Silent:1b,Invulnerable:1b}
+schedule function items:schedules/waiting_as_on_ground 1t replace
+scoreboard players add #as_count sb_items.data 1
 
-execute if entity @p[distance=..2,predicate=items:sprinting] run execute store result entity @e[tag=sb.item_drop,limit=1,sort=nearest,tag=!sb.completed] Motion[0] double 0.001 run data get entity @s Motion[0] 3000
+#Store result of player sprinting check
+scoreboard players set #success sb_items.data 0
+execute store success score #success sb_items.data if entity @p[distance=..2,predicate=items:sprinting]
 
-execute if entity @p[distance=..2,predicate=items:sprinting] run execute store result entity @e[tag=sb.item_drop,limit=1,sort=nearest,tag=!sb.completed] Motion[1] double 0.001 run data get entity @s Motion[1] 3000
+#Store in a storage item nbt to avoid selector usage (@e).
+data modify storage items:main temp set from entity @s
 
-execute if entity @p[distance=..2,predicate=items:sprinting] run execute store result entity @e[tag=sb.item_drop,limit=1,sort=nearest,tag=!sb.completed] Motion[2] double 0.001 run data get entity @s Motion[2] 3000
+#Run the function on the new armor_stand to avoid multiple @e selectors.
+execute as @e[type=armor_stand,tag=sb.item_drop,distance=..1,limit=1,sort=nearest,tag=!sb.completed] run function items:as_place_2
 
-
-data modify entity @e[tag=sb.item_drop,limit=1,sort=nearest,tag=!sb.completed] HandItems[1] set from entity @s Item
-
-scoreboard players set @e[tag=sb.item_drop,limit=1,sort=nearest,tag=!sb.completed] sblifetime 1
-
-tag @s add sb.completed
-
+#Delete item
 kill @s
+
