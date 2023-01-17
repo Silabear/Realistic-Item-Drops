@@ -14,7 +14,7 @@ This datapack makes items display nicer on the floor. Inspired by the [Realistic
 ## Enabling and changing settings
 Once you install the datapack, run /reload. It will then be ready to play!
 
-If you want to change the display mode, run the command /function items:menu. This will bring up a menu that looks like this:
+If you want to change the display mode, run the command /function zrid:menu. This will bring up a menu that looks like this:
 ![Menu](https://cdn.discordapp.com/attachments/723984082853298297/899319000964673566/unknown.png "Realistic Item Drops menu") Here are the display types:
 - **[​Realistic]** makes the items display realistically as if you had thrown them.
 - **[​Flat]** makes them all display flat on the ground on a 1x1 grid.

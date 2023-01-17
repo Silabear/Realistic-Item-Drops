@@ -1,2 +1,2 @@
 
-function items:reinstall
+function zrid:reinstall

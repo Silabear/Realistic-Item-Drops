@@ -9,7 +9,7 @@ execute store success score .settings ridsb.initcheck run scoreboard objectives 
 execute unless score .settings ridsb.initcheck matches 0 run scoreboard players set .display ridsb.settings 0
  
 scoreboard objectives add sb.lifetime dummy
-function items:schedules/loop_5s
+function zrid:schedules/loop_5s
 
 #define storage items:main
 

@@ -1,2 +1,2 @@
 
-function items:uninstall
+function zrid:uninstall

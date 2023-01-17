@@ -15,8 +15,8 @@ This datapack makes items display nicer on the floor. Inspired by the Realistic 
 To install this datapack, go to the latest version through the Releases tab on the right hand side. Then, download RealisticItemDrops.zip. Place this zip file in your world saves folder: `<world save>/datapacks`. Then, open the world and *run /reload*
 
 ## Configuration
-This datapack comes with a handy menu to change the settings. To show the menu, run the command `/function items:menu`. Then, you can click on the options in the settings to change them.
+This datapack comes with a handy menu to change the settings. To show the menu, run the command `/function zrid:menu`. Then, you can click on the options in the settings to change them.
 ![Menu](https://cdn.discordapp.com/attachments/723984082853298297/899319000964673566/unknown.png)
 
 ## Uninstalling
-To uninstall the datapack, you can run the command `/function items:uninstall`. This will kill all dropped items and turn off all the features in the datapack. Once you have done this, you can remove the datapack file from the world safely. If you change your mind, just run the command `/function items:reinstall` and all features will be enabled once again
+To uninstall the datapack, you can run the command `/function zrid:uninstall`. This will kill all dropped items and turn off all the features in the datapack. Once you have done this, you can remove the datapack file from the world safely. If you change your mind, just run the command `/function zrid:reinstall` and all features will be enabled once again

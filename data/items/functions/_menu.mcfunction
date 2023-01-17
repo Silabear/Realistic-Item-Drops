@@ -1,2 +1,2 @@
 
-function items:menu
+function zrid:menu

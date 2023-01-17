@@ -1,1 +1,0 @@
-execute if score .value ridsb.uninstalled matches 0 run function items:loop
