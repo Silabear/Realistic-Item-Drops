@@ -1,0 +1,2 @@
+execute unless predicate items:is_override if block ~ ~-.5 ~ minecraft:hopper run function items:realistic/convert_to_item
+execute if entity @a[distance=..1] run function items:realistic/convert_to_item

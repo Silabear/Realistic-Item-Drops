@@ -2,7 +2,11 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "nbt": "{Item:{Count:1b}}"
+        "equipment": {
+        "head": {
+            "tag": "items:override"
+        }
+        }
     }
-  }
+}
   

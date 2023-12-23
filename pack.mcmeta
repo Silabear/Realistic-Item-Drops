@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
-        "description": "Better Item Dropping by Silabear"
+        "pack_format": 26,
+        "description": [{"text":"Realistic Item Drops ","color":"blue"},{"text":"🛡 Datapack\n","color":"green"},{"text": "⛏ v3.0 | ✔ Stable | ✉ Silabear","color": "dark_gray"}]
     }
 }

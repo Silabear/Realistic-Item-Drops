@@ -1,0 +1,1 @@
+$particle block $(Particle) ~ ~-.2 ~ 0 0 0 1 50 force

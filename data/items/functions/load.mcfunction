@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"\u2714","color":"green"},{"text":" Realistic Item Drops","color":"yellow"},{"text":" v3 ","color":"gold"},{"text":"by Silabear","color":"aqua"}]
